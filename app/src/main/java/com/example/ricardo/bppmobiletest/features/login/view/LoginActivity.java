@@ -1,5 +1,6 @@
 package com.example.ricardo.bppmobiletest.features.login.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 import com.example.ricardo.bppmobiletest.R;
 import com.example.ricardo.bppmobiletest.features.login.LoginContract;
 import com.example.ricardo.bppmobiletest.features.login.presenter.LoginPresenter;
+import com.example.ricardo.bppmobiletest.features.timeline.view.TimelineActivity;
 
 public class LoginActivity extends AppCompatActivity implements LoginContract.View {
 
@@ -86,7 +88,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
 
     @Override
     public void openTimeline() {
-        // TODO: open timeline
+        startActivity(new Intent(this, TimelineActivity.class));
     }
 
     @Override
